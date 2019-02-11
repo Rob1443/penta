@@ -35,18 +35,18 @@ AppAsset::register($this);
             </div>
             <div class="penta"><h1 class="pen">Penta</h1></div>
             <div class="penta"><nav>
-                    <li>SIGN UP</li>
-                    <li>LOGIN</li>
-                    <li>ABOUT</li>
-                    <li>CONTACT</li>
+                    <li><a href="">SIGN UP</a></li>
+                    <li><a href="">LOGIN</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
                 </nav></div>
         </div>
         <div class="n" id="n2">
             <nav class="nav">
-                <li>HOME</li>
-                <li>MEN'S</li>
-                <li>WOMEN'S</li>
-                <li>BABY</li>
+                <li class="li1"><a href="">HOME</a></li>
+                <li><a href="">MEN'S</a></li>
+                <li><a href="">WOMEN'S</a></li>
+                <li><a href="">BABY</a></li>
             </nav>
         </div>
     </header>
