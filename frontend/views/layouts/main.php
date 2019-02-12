@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -35,18 +36,18 @@ AppAsset::register($this);
             </div>
             <div class="penta"><h1 class="pen">Penta</h1></div>
             <div class="penta"><nav>
-                    <li><a href="">SIGN UP</a></li>
-                    <li><a href="">LOGIN</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/signup' ?>">SIGN UP</a></li>
+                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/login' ?>">LOGIN</a></li>
+                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">ABOUT</a></li>
+                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">CONTACT</a></li>
                 </nav></div>
         </div>
         <div class="n" id="n2">
             <nav class="nav">
-                <li class="li1"><a href="">HOME</a></li>
+                <li class="li1"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/index' ?>">HOME</a></li>
                 <li><a href="">MEN'S</a></li>
                 <li><a href="">WOMEN'S</a></li>
-                <li><a href="">BABY</a></li>
+                <li><a href="">KIDS'S</a></li>
             </nav>
         </div>
     </header>

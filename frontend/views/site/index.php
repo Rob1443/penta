@@ -13,25 +13,35 @@ $this->title = 'My Yii Application';
         <div class="sumka"><img class="im" src="image/Layer-22.png" height="495"></div>
     </div>
     <div class="arajin1">
+        <?php
+        if(!empty($categories)) {
+            foreach($categories as $cat) {
+
+            }
+        }
+
+        ?>
+
         <div class="sumka">
             <div class="b1">
-                <p class="bigsale1">MEN'S</p>
+
+                <p class="bigsale1"><?php  echo $categories[0]["title"] ?></p>
                 <p class="col">COLECTION</p>
                 <button class="but11"><a class="st">DISCOVER NOW</a></button>
             </div>
-            <div class="img"><img class="im" src="image/Layer-20.png" height="495"></div></div>
+            <div class="img"><img class="im" src="image/<?= $categories[0]["image"] ?>" height="495"></div></div>
         <div class="sumka2">
             <div class="two">
-                <p class="wom">WOMEN'S</p>
+                <p class="wom"><?php  echo $categories[1]["title"] ?></p>
                 <p class="col1">COLECTION</p>
                 <button class="but11"><a class="st">DISCOVER NOW</a></button>
-                <div class="imw"><img src="image/Layer-5.png" height="220"></div>
+                <div class="imw"><img src="image/<?= $categories[1]["image"] ?>" height="220"></div>
             </div>
             <div class="two1">
-                <p class="wom">KIDS'S</p>
+                <p class="wom"><?php  echo $categories[2]["title"] ?></p>
                 <p class="col1">COLECTION</p>
                 <button class="but11"><a class="st">DISCOVER NOW</a></button>
-                <div class="imw"><img src="image/Layer-211.png" height="220"></div>
+                <div class="imw"><img src="image/<?= $categories[2]["image"] ?>"" height="220"></div>
             </div>
         </div>
     </div>
