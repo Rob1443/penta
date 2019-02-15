@@ -25,8 +25,6 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-<?php $this->beginBody() ?>
-
 
     <header>
         <div class="n" id="n1">
@@ -35,12 +33,33 @@ AppAsset::register($this);
                 <div  class="mail1"><p>pt@mail.ru</p></div>
             </div>
             <div class="penta"><h1 class="pen">Penta</h1></div>
-            <div class="penta"><nav>
-                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/signup' ?>">SIGN UP</a></li>
-                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/login' ?>">LOGIN</a></li>
-                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/about' ?>">ABOUT</a></li>
-                    <li><a href="<?= \yii\helpers\Url::to(['/']) . 'site/contact' ?>">CONTACT</a></li>
-                </nav></div>
+            <div class="penta">
+                <?php
+                $menuItems = [
+                    ['label' => 'About', 'url' => ['site/about']],
+                    ['label' => 'Contact', 'url' => ['site/contact']],
+
+                ];
+                if (Yii::$app->user->isGuest) {
+                    $menuItems[] = ['label' => 'Signup', 'url' => ['site/signup']];
+                    $menuItems[] = ['label' => 'Login', 'url' => ['site/login']];
+                } else {
+                    $menuItems[] = '<li class="li">'
+                        . Html::beginForm(['/site/logout'], 'post')
+                        . Html::submitButton(
+                            'Logout (' . Yii::$app->user->identity->username . ')',
+                            ['class' => 'logout']
+                        )
+                        . Html::endForm()
+                        . '</li>';
+                }
+                echo Nav::widget([
+                    'options' => ['class' => 'li'],
+                    'items' => $menuItems,
+                ]);
+
+                ?>
+            </div>
         </div>
         <div class="n" id="n2">
             <nav class="nav">

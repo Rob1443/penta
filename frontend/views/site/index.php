@@ -51,14 +51,14 @@ $this->title = 'My Yii Application';
         </div>
         <div class="three">
             <div class="ones">
-                <img class="imlo" src="images/Layer-4.png" height="250">
+                <img class="imlo" src="<?= \yii\helpers\Url::to('@web/images/Layer-4.png')?>" height="250">
 
             </div>
             <div class="ones">
-                <img src="images/Layer-11.png" height="350"></div>
+                <img src="<?= \yii\helpers\Url::to('@web/images/Layer-11.png')?>" height="350"></div>
 
             <div class="ones1">
-                <img src="images/Layer-12.png" height="350"></div>
+                <img src="<?= \yii\helpers\Url::to('@web/images/Layer-12.png')?>" height="350"></div>
 
         </div>
     </div>
@@ -69,26 +69,26 @@ $this->title = 'My Yii Application';
         </div>
         <div class="three">
             <div class="ones">
-                <img class="imlo" src="images/Layer-4.png" height="250">
+                <img class="imlo" src="<?= \yii\helpers\Url::to('@web/images/Layer-4.png')?>" height="250">
 
             </div>
             <div class="ones">
-                <img src="images/Layer-11.png" height="350"></div>
+                <img src="<?= \yii\helpers\Url::to('@web/images/Layer-11.png')?>" height="350"></div>
 
             <div class="ones1">
-                <img src="images/Layer-15.png" height="350"></div>
+                <img src="<?= \yii\helpers\Url::to('@web/images/Layer-15.png')?>" height="350"></div>
 
         </div>
         <div class="three1">
             <div class="ones">
-                <img class="imlo111" src="images/Layer-13.png" height="350">
+                <img class="imlo111" src="<?= \yii\helpers\Url::to('@web/images/Layer-13.png')?>" height="350">
 
             </div>
             <div class="ones">
-                <img src="images/Layer-15.png" height="350"></div>
+                <img src="<?= \yii\helpers\Url::to('@web/images/Layer-15.png')?>" height="350"></div>
 
             <div class="ones1">
-                <img src="images/Layer-12.png" height="350"></div>
+                <img src="<?= \yii\helpers\Url::to('@web/images/Layer-12.png')?>" height="350"></div>
 
         </div>
     </div>
@@ -97,13 +97,13 @@ $this->title = 'My Yii Application';
             <p class="text">LATEST POSTS</p>
         </div>
         <div class="rufer1" >
-            <img src="images/Layer-8.png" width="100%" height="280"><br>
+            <img src="<?= \yii\helpers\Url::to('@web/images/Layer-8.png')?>" width="100%" height="280"><br>
             <p>Top 15 Personalized Gift Ideas For Mom</p>
         </div>
-        <div class="rufer" > <img src="images/Layer-7.png" width="100%" height="280"><br>
+        <div class="rufer" > <img src="<?= \yii\helpers\Url::to('@web/images/Layer-7.png')?>" width="100%" height="280"><br>
             <p>Top 15 Personalized Gift Ideas For Mom</p>
         </div>
-        <div class="rufer" > <img src="images/Layer-10.png" width="100%" height="280"><br>
+        <div class="rufer" > <img src="<?= \yii\helpers\Url::to('@web/images/Layer-10.png')?>" width="100%" height="280"><br>
             <p>Top 15 Personalized Gift Ideas For Mom</p>
         </div>
     </div>
