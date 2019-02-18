@@ -13,6 +13,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use common\models\Categories;
+use common\models\Products;
 
 /**
  * Site controller
@@ -73,10 +74,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $new = Products::find()->where(['is_new'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
+
         $categories = Categories::find()->asArray()->all();
 
         return $this->render('index',[
-            'categories' => $categories
+            'categories' => $categories,
+            'new' => $new
         ]);
     }
 

@@ -16,34 +16,51 @@ $this->title = 'My Yii Application';
         <?php
         if(!empty($categories)) {
             foreach($categories as $cat) {
+?>
+                <div class="sumka">
+                    <?php for($i = 0; $i<= 3; $i++){
+                        if($i !== 0){
 
+                        }
+                    }?>
+                    <div class="b1">
+
+
+                        <p class="bigsale1"><?php echo $cat["title"] ?></p>
+                        <p class="col">COLECTION</p>
+                        <button class="but11"><a class="st">DISCOVER NOW</a></button>
+                    </div>
+                    <div class="img"><img class="im" src="images/<?= $cat["image"] ?>" height="495"></div></div>
+        <?php
             }
         }
 
         ?>
+<?php //var_dump($new) ?>
 
-        <div class="sumka">
-            <div class="b1">
-
-                <p class="bigsale1"><?php  echo $categories[0]["title"] ?></p>
-                <p class="col">COLECTION</p>
-                <button class="but11"><a class="st">DISCOVER NOW</a></button>
-            </div>
-            <div class="img"><img class="im" src="images/<?= $categories[0]["image"] ?>" height="495"></div></div>
-        <div class="sumka2">
-            <div class="two">
-                <p class="wom"><?php  echo $categories[1]["title"] ?></p>
-                <p class="col1">COLECTION</p>
-                <button class="but11"><a class="st">DISCOVER NOW</a></button>
-                <div class="imw"><img src="images/<?= $categories[1]["image"] ?>" height="220"></div>
-            </div>
-            <div class="two1">
-                <p class="wom"><?php  echo $categories[2]["title"] ?></p>
-                <p class="col1">COLECTION</p>
-                <button class="but11"><a class="st">DISCOVER NOW</a></button>
-                <div class="imw"><img src="images/<?= $categories[2]["image"] ?>"" height="220"></div>
-            </div>
-        </div>
+<!--        <div class="sumka">-->
+<!--            <div class="b1">-->
+<!---->
+<!---->
+<!--                <p class="bigsale1">--><?php //echo $cat["title"] ?><!--</p>-->
+<!--                <p class="col">COLECTION</p>-->
+<!--                <button class="but11"><a class="st">DISCOVER NOW</a></button>-->
+<!--            </div>-->
+<!--            <div class="img"><img class="im" src="images/--><?//= $cat["image"] ?><!--" height="495"></div></div>-->
+<!--        <div class="sumka2">-->
+<!--            <div class="two">-->
+<!--                <p class="wom">--><?php // echo $categories[1]["title"] ?><!--</p>-->
+<!--                <p class="col1">COLECTION</p>-->
+<!--                <button class="but11"><a class="st">DISCOVER NOW</a></button>-->
+<!--                <div class="imw"><img src="images/--><?//= $cat["image"] ?><!--" height="220"></div>-->
+<!--            </div>-->
+<!--            <div class="two1">-->
+<!--                <p class="wom">--><?php // echo $cat["title"] ?><!--</p>-->
+<!--                <p class="col1">COLECTION</p>-->
+<!--                <button class="but11"><a class="st">DISCOVER NOW</a></button>-->
+<!--                <div class="imw"><img src="images/--><?//= $cat]["image"] ?><!--"" height="220"></div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
     <div class="ask">
         <div class="kind">

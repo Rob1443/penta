@@ -14,10 +14,23 @@ use Yii;
 
 class ProductsController extends Controller
 {
-
+//    public function actionIndex()
+//    {
+//        $feature = Products::find()->where(['is_feature'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(8)->asArray()->all();
+//        $category = \common\models\Categories::find()->orderBy(['title' => 4])->asArray()->all();
+//        $brands = Brands::find()->orderBy(['title' => 4])->asArray()->all();
+//        $user = \Yii::$app->user->id;
+//        $wishlist = Wishlist::find()->where(['user_id' => $user])->asArray()->all();
+//
+//        return $this->render('index',[
+//            'brands' => $brands,
+//            'categories' => $category,
+//            'feature'=>$feature,
+//            'wishlist' => $wishlist
+//        ]);
+//    }
     public function actionIndex($slug = "",$brand = "")
     {
-
         $categories = Categories::find()->asArray()->all();
         $products = Products::find()->orderBy(['title' => 4]);
         $brands = Brands::find()->asArray()->all();
