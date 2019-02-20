@@ -74,13 +74,15 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $forstylish = Products::find()->where(['for_stylish'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
         $new = Products::find()->where(['is_new'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
-
+        $featured=Products::find()->where(['is_feature'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(6)->asArray()->all();
         $categories = Categories::find()->asArray()->all();
-
         return $this->render('index',[
             'categories' => $categories,
-            'new' => $new
+            'new' => $new,
+            'featured' => $featured,
+            'forstylish' =>$forstylish
         ]);
     }
 

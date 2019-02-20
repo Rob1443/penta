@@ -63,8 +63,8 @@ AppAsset::register($this);
         </div>
         <div class="n" id="n2">
             <nav class="nav">
-                <li class="li1"><a href="<?= \yii\helpers\Url::to(['/']) . 'site/index' ?>">HOME</a></li>
-                <li><a href="frontend/productsw/views/products/product.php">MEN'S</a></li>
+                <li class="li1"><a href="<?= \yii\helpers\Url::to(['/']) ?>">HOME</a></li>
+                <li><a href="">MEN'S</a></li>
                 <li><a href="">WOMEN'S</a></li>
                 <li><a href="">KIDS'S</a></li>
             </nav>
