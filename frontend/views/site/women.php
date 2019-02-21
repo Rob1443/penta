@@ -6,7 +6,7 @@ $this->title = 'My Yii Application';
 ?>
 <div class="content1">
     <div class="kind111">
-        <p class="text1">MEN'S</p>
+        <p class="text1">WOMEN'S</p>
     </div>
     <div class="ask">
         <div class="three">
