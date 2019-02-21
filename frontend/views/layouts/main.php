@@ -38,7 +38,6 @@ AppAsset::register($this);
                 $menuItems = [
                     ['label' => 'About', 'url' => ['site/about']],
                     ['label' => 'Contact', 'url' => ['site/contact']],
-
                 ];
                 if (Yii::$app->user->isGuest) {
                     $menuItems[] = ['label' => 'Signup', 'url' => ['site/signup']];
@@ -62,21 +61,17 @@ AppAsset::register($this);
             </div>
         </div>
         <div class="n" id="n2">
-            <nav class="nav">
+            <ul class="nav">
                 <li class="li1"><a href="<?= \yii\helpers\Url::to(['/']) ?>">HOME</a></li>
-                <li><a href="">MEN'S</a></li>
+                <li><a href="<?= \yii\helpers\Url::to('@web/views/site/men.php') ?>">MEN'S</a></li>
                 <li><a href="">WOMEN'S</a></li>
                 <li><a href="">KIDS'S</a></li>
-            </nav>
+            </ul>
         </div>
     </header>
         <?= $content ?>
-
-</div>
-
-
     <footer>
-        <nav class="nav1">
+        <ul class="nav1">
             <li>CONTACT</li>
             <li>RETURN POLICY</li>
             <li>SHIPPING</li>
@@ -84,7 +79,7 @@ AppAsset::register($this);
             <li>PRIVACY POLICY</li>
             <br>
 
-        </nav>
+        </ul>
     </footer>
 
 
