@@ -85,7 +85,6 @@ class SiteController extends Controller
             'forstylish' =>$forstylish
         ]);
     }
-
     /**
      * Logs in a user.
      *
@@ -153,7 +152,51 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-
+    public function actionMen()
+    {
+        $men = Products::find()->where(['Cat_ID'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(21)->asArray()->all();
+        $forstylish = Products::find()->where(['for_stylish'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
+        $new = Products::find()->where(['is_new'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
+        $featured=Products::find()->where(['is_feature'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(6)->asArray()->all();
+        $categories = Categories::find()->asArray()->all();
+        return $this->render('men',[
+            'categories' => $categories,
+            'new' => $new,
+            'featured' => $featured,
+            'forstylish' =>$forstylish,
+            'men' =>$men
+        ]);
+    }
+    public function actionWomen()
+    {
+        $women = Products::find()->where(['Cat_ID'=>'2'])->orderBy(['id'=>SORT_DESC])->limit(21)->asArray()->all();
+        $forstylish = Products::find()->where(['for_stylish'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
+        $new = Products::find()->where(['is_new'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
+        $featured=Products::find()->where(['is_feature'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(6)->asArray()->all();
+        $categories = Categories::find()->asArray()->all();
+        return $this->render('women',[
+            'categories' => $categories,
+            'new' => $new,
+            'featured' => $featured,
+            'forstylish' =>$forstylish,
+            'women' =>$women
+        ]);
+    }
+    public function actionKids()
+    {
+        $kids = Products::find()->where(['Cat_ID'=>'3'])->orderBy(['id'=>SORT_DESC])->limit(21)->asArray()->all();
+        $forstylish = Products::find()->where(['for_stylish'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
+        $new = Products::find()->where(['is_new'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
+        $featured=Products::find()->where(['is_feature'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(6)->asArray()->all();
+        $categories = Categories::find()->asArray()->all();
+        return $this->render('kids',[
+            'categories' => $categories,
+            'new' => $new,
+            'featured' => $featured,
+            'forstylish' =>$forstylish,
+            'kids' =>$kids
+        ]);
+    }
     /**
      * Signs user up.
      *

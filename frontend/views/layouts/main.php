@@ -63,9 +63,18 @@ AppAsset::register($this);
         <div class="n" id="n2">
             <ul class="nav">
                 <li class="li1"><a href="<?= \yii\helpers\Url::to(['/']) ?>">HOME</a></li>
-                <li><a href="<?= \yii\helpers\Url::to('@web/views/site/men.php') ?>">MEN'S</a></li>
-                <li><a href="">WOMEN'S</a></li>
-                <li><a href="">KIDS'S</a></li>
+                <?php
+                $menuItems = [
+                    ['label' => "MEN'S", 'url' => ['site/men']],
+                    ['label' => "WOMEN'S", 'url' => ['site/women']],
+                    ['label' => "KIDS'S", 'url' => ['site/kids']],
+                ];
+                echo Nav::widget([
+                    'options' => ['class' => 'wmk'],
+                    'items' => $menuItems,
+                ]);
+
+                ?>
             </ul>
         </div>
     </header>

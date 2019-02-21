@@ -225,6 +225,12 @@ li{
     width: 100%;
     margin-top: 150px;
 }
+.kind111{
+    height: 100px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: -80px;
+}
 .three1{
     width: 1000px;
     height: 100%;
@@ -237,6 +243,15 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.text1{
+    font-family: 'Cinzel', serif;
+    color: #424242;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
 }
 .text2{
     font-family: 'Cinzel', serif;
@@ -259,7 +274,7 @@ li{
      float: left;
      background-color: #f4f4f4;
      margin-right: 20px;
-    margin-top: 20px;
+     margin-top: 20px;
  }
 .ones>img{
     width: 100%;
@@ -306,7 +321,11 @@ li{
     height: 500px;
     width: 100%;
     margin-top: 600px;
-
+}
+.sos1{
+    height: 100px;
+    width: 100%;
+    margin-top: 300px;
 }
 .rufer{
     font-family: 'Cinzel', serif;
@@ -348,8 +367,18 @@ a:hover{
     font-family: 'Cinzel', serif;
     color: black;
 }
-
-
+.wmk{
+    text-decoration: none;
+    display: inline;
+    float: left;
+    margin: 12px;
+    font-family: 'Cinzel', serif;
+    margin-left: -10px;
+    margin-top: 0;
+}
+.content1{
+    height: 2500px;
+}
 
 
 

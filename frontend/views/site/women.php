@@ -10,7 +10,7 @@ $this->title = 'My Yii Application';
     </div>
     <div class="ask">
         <div class="three">
-            <?php foreach($men as $value){
+            <?php foreach($women as $value){
                 ?>
                 <div class="ones">
                     <img src="<?= \yii\helpers\Url::to('@web/images/uploads/products/' . $value['image']) ?>"  height="250">
@@ -25,6 +25,4 @@ $this->title = 'My Yii Application';
     <div class="sos1">
     </div>
 </div>
-
-
 
