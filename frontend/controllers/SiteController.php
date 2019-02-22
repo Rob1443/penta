@@ -184,6 +184,7 @@ class SiteController extends Controller
     }
     public function actionKids()
     {
+
         $kids = Products::find()->where(['Cat_ID'=>'3'])->orderBy(['id'=>SORT_DESC])->limit(21)->asArray()->all();
         $forstylish = Products::find()->where(['for_stylish'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
         $new = Products::find()->where(['is_new'=>'1'])->orderBy(['id'=>SORT_DESC])->limit(3)->asArray()->all();
@@ -195,6 +196,14 @@ class SiteController extends Controller
             'featured' => $featured,
             'forstylish' =>$forstylish,
             'kids' =>$kids
+        ]);
+    }
+    public function actionSingle()
+    {
+        $id = Yii::$app->request->get('id');
+        $product = Products::find()->where(['id' => $id])->asArray()->one();
+        return $this->render('single',[
+            'product' =>$product
         ]);
     }
     /**

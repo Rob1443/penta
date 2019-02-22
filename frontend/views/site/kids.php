@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'PENTA';
 ?>
 <div class="content1">
     <div class="kind111">
@@ -13,8 +13,10 @@ $this->title = 'My Yii Application';
             <?php foreach($kids as $value){
                 ?>
                 <div class="ones">
-                    <img src="<?= \yii\helpers\Url::to('@web/images/uploads/products/' . $value['image']) ?>"  height="250">
-
+                    <img src="<?= \yii\helpers\Url::to('@web/images/uploads/products/' . $value['image']) ?>">
+                    <div>
+                        <button class="under"><a href="<?= \yii\helpers\Url::to(['/site/single', 'id' =>$value['id'] ]) ?>" class="t">Buy For <?= \yii\helpers\Url::to( $value ['price']) ?>$</a></button>
+                    </div>
                 </div>
                 <?php
             }

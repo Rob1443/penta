@@ -2,16 +2,15 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'PENTA';
 ?>
-
 <div class="content">
     <div class="arajin">
         <div class="sumka"><p class="bigsale">BIG SALE</p><br>
             <button class="but"><a class="st">DISCOVER STORE</a></button>
             <button class="but1"><a class="st">LEARN MORE</a></button>
         </div>
-        <div class="sumka"><img class="im" src="images/Layer-22.png" height="495"></div>
+        <div class="sumka"><img class="imm" src="images/Layer-22.png" height="495"></div>
     </div>
     <div class="arajin1">
         <div class="sumka">
@@ -44,26 +43,29 @@ $this->title = 'My Yii Application';
         <?php foreach($new as $item){
           ?>
             <div class="ones">
-                <img src="<?= \yii\helpers\Url::to('@web/images/uploads/products/' . $item['image']) ?>"  height="250">
-
+                <img src="<?= \yii\helpers\Url::to('@web/images/uploads/products/' . $item['image']) ?>">
+                <div>
+                    <button class="under"><a href="<?= \yii\helpers\Url::to(['/site/single', 'id' =>$item['id'] ]) ?>" class="t">Buy For <?= \yii\helpers\Url::to( $item['price']) ?>$</a></button>
+                </div>
             </div>
+
             <?php
         }
         ?>
 
         </div>
     </div>
-    <div class="ask">
+    <div class="ask11">
         <div class="kind11">
             <p class="text">FEATURED PRODUCTS</p>
-
         </div>
-        <div class="three">
+        <div class="three1">
             <?php foreach($featured as $item){
                 ?>
-                <div class="ones">
-                    <img src="<?= \yii\helpers\Url::to('@web/images/uploads/products/' . $item['image']) ?>"  height="250">
-
+                <div class="ones111">
+                    <img src="<?= \yii\helpers\Url::to('@web/images/uploads/products/' . $item['image']) ?>"  >
+                    <div>
+                        <button class="under"><a href="<?= \yii\helpers\Url::to(['/site/single', 'id' =>$item['id'] ]) ?>" class="t">Buy For <?= \yii\helpers\Url::to( $item['price']) ?>$</a></button></div>
                 </div>
                 <?php
             }
