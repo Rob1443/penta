@@ -415,14 +415,11 @@ a:hover{
     display: inline;
     border: none;
 }
-.lock{
-    height: 250px;
-    width: 250px;
-    float: left;
-    display: inline;
-    background-color: yellow;
+.trt{
+    font-family: 'Cinzel', serif;
+    margin-right: 300px;
 }
+#t{
+    font-family: 'Cinzel', serif;
 
-
-
-
+}

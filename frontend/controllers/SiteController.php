@@ -206,6 +206,14 @@ class SiteController extends Controller
             'product' =>$product
         ]);
     }
+
+    public function actionCart()
+    {
+        $product = Products::find()->asArray()->all();
+        return $this->render('cart',[
+            'product' =>$product
+        ]);
+    }
     /**
      * Signs user up.
      *

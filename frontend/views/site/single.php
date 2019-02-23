@@ -1,19 +1,9 @@
 <?php
-//
-///* @var $this yii\web\View */
-//
-//$this->title = 'PENTA';
-//?>
-<!---->
-<!---->
-<!--        <div>-->
-<!--            <p class="t">--><?php //echo $product['title']; ?><!--</p>-->
-<!--            <img src="--><?//= \yii\helpers\Url::to('@web/images/uploads/products/' . $product['image']) ?><!--">-->
-<!--        </div>-->
-<!---->
-<!---->
-<!--    </div>-->
-<!-- Product Details Area Start -->
+
+/* @var $this yii\web\View */
+
+$this->title = 'PENTA';
+?>
 <style>
     .lock{
         height: 50px;
@@ -73,21 +63,23 @@
         </div>
         <div class="col-12 col-lg-5">
             <div class="varchar">
-                <h3 class="t"><?= \yii\helpers\Url::to( $product['title']) ?></h3>
+                <h2 class="t"><?= \yii\helpers\Url::to( $product['title']) ?></h2>
                 <div class="kka">
-                    <p class="price"><?= \yii\helpers\Url::to( $product['price']) ?></p>
-                    <h6><?= \yii\helpers\Url::to( $product['sku']) ?></h6>
+                    <h4 class="t">Price <?= \yii\helpers\Url::to( $product['price']) ?>$</h4>
+                    <h4 class="t">Sale Price <?= \yii\helpers\Url::to( $product['sale_price']) ?>$</h4>
+                    <h4 class="t"><?= \yii\helpers\Url::to( $product['sku']) ?></h4>
+<!--                    senq te jenskii sumka-->
                     </a>
-                    <div class="ratings-review mb-15 d-flex align-items-center justify-content-between">
-                    </div>
-                    <p class="avaibility"><i class="fa fa-circle"></i>Available Stock <?= \yii\helpers\Url::to( $product['available_stock']) ?></p>
+                    <h4 class="t">Available Stock <?= \yii\helpers\Url::to( $product['available_stock']) ?></h4>
                 </div>
 
                 <div class="short_overview my-5">
-                    <p><?= \yii\helpers\Url::to( $product['content']) ?></p>
+                    <h4 class="t" ><?= \yii\helpers\Url::to( $product['content']) ?></h4>
+<!--                    ese en erkar barak bnutagirne-->
                 </div>
                 <form class="cart" method="post">
-                    <button type="submit" name="addtocart" value="5" class="btn amado-btn">Add to cart</button>
+                    <button type="submit" name="addtocart" value="5" class="t"><a href="<?= \yii\helpers\Url::to(['/site/cart/']) ?>">Add to cart</a></button>
+                    <button type="submit" name="addtocart" value="5" class="t">Buy For Sale Price <?= \yii\helpers\Url::to( $product['sale_price']) ?>$</button>
                 </form>
 
             </div>

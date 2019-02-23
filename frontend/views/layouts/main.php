@@ -81,10 +81,19 @@ AppAsset::register($this);
         <?= $content ?>
     <footer>
         <ul class="nav1">
-            <li>CONTACT</li>
+            <?php
+            $menuItems = [
+                ['label' => 'About', 'url' => ['site/about']],
+                ['label' => 'Contact', 'url' => ['site/contact']],
+            ];
+            echo Nav::widget([
+                'options' => ['class' => 'li'],
+                'items' => $menuItems,
+            ]);
+
+            ?>
             <li>RETURN POLICY</li>
             <li>SHIPPING</li>
-            <li>ABOUT</li>
             <li>PRIVACY POLICY</li>
             <br>
 
