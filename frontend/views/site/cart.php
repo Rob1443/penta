@@ -1,9 +1,10 @@
 <div class="table">
     <div class="layout-inline row th">
-        <div class="col col-pro"><p>Product</p></div>
-        <div class="col col-price align-center "><p>Price</p></div>
-        <div class="col col-qty align-center"><p>Available <br> Stock</p></div>
-        <div class="col col-qty align-center"><p>Buy</p></div>
+        <div id="vt" class="col col-pro"><p>Product</p></div>
+        <div id="vto" class="col col-price align-center "><p>Price</p></div>
+        <div id="vto" class="col col-qty align-center"><p>Available <br> Stock</p></div>
+        <div id="vat" class="col col-qty align-center"><p>Buy</p></div>
+        <div id="vat" class="col col-qty align-center"><p>Delete</p></div>
 
     </div>
     <?php foreach($product as $item){
@@ -23,6 +24,7 @@
                 <input type="numeric" value="<?= \yii\helpers\Url::to( $item['available_stock']) ?>"/>
             </div>
             <button type="submit" name="addtocart" value="5" class="t">Buy For Sale Price <?= \yii\helpers\Url::to( $item['sale_price']) ?>$</button>
+            <button type="submit" name="addtocart"  class="lav">Delete From Cart</button>
 
         </div>
 
@@ -36,6 +38,22 @@
 
 
 <style>
+    #vat{
+        width: 200px;
+        margin-left: -40px;
+        float: left;
+        display: inline;
+    }
+    #vt{
+        margin-left: 80px;
+        float: left;
+        display: inline;
+    }
+    #vto{
+        margin-left: 0;
+        float: left;
+        display: inline;
+    }
     @font-face {
         font-family: 'Cinzel', serif;
     }

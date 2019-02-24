@@ -67,8 +67,8 @@ $this->title = 'PENTA';
                 <div class="kka">
                     <h4 class="t">Price <?= \yii\helpers\Url::to( $product['price']) ?>$</h4>
                     <h4 class="t">Sale Price <?= \yii\helpers\Url::to( $product['sale_price']) ?>$</h4>
-                    <h4 class="t"><?= \yii\helpers\Url::to( $product['sku']) ?></h4>
-<!--                    senq te jenskii sumka-->
+<!--                    <h4 class="t">--><?//= \yii\helpers\Url::to( $product['sku']) ?><!--</h4>-->
+<!--                    pruducti id-->
                     </a>
                     <h4 class="t">Available Stock <?= \yii\helpers\Url::to( $product['available_stock']) ?></h4>
                 </div>

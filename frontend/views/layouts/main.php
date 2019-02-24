@@ -42,12 +42,17 @@ AppAsset::register($this);
                 if (Yii::$app->user->isGuest) {
                     $menuItems[] = ['label' => 'Signup', 'url' => ['site/signup']];
                     $menuItems[] = ['label' => 'Login', 'url' => ['site/login']];
-                } else {
+                } else{
+                    ?>
+                    <li class="logout1"><a href="<?= \yii\helpers\Url::to('@web/site/cart' ) ?>">Cart</a></li>
+
+                    <?php
                     $menuItems[] = '<li class="li">'
                         . Html::beginForm(['/site/logout'], 'post')
                         . Html::submitButton(
                             'Logout (' . Yii::$app->user->identity->username . ')',
                             ['class' => 'logout']
+
                         )
                         . Html::endForm()
                         . '</li>';
